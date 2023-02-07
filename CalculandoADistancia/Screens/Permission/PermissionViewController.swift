@@ -19,6 +19,13 @@ class PermissionViewController: UIViewController {
     }
 
     private func setupMainButton() {
-        mainButton.setupTitle("ATIVAR LOCALIZAÇÃO")
+        mainButton.titleLabel.text = "ATIVAR LOCALIZAÇÃO"
+        mainButton.delegate = self
+    }
+}
+
+extension PermissionViewController: MainButtonDelegate {
+    func didTapMainButton() {
+        print("tap")
     }
 }
