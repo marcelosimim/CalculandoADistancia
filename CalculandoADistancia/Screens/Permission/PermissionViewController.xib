@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PermissionViewController" customModule="CalculandoADistancia" customModuleProvider="target">
             <connections>
+                <outlet property="mainButton" destination="fMX-UF-mgL" id="2kn-Ib-w84"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,9 +41,17 @@ Dessa forma conseguimos utilizar com maior precisão para calcular a distância 
                     <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMX-UF-mgL" customClass="MainButton" customModule="CalculandoADistancia" customModuleProvider="target">
+                    <rect key="frame" x="49" y="705" width="295" height="53"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="hRY-Ex-gZg"/>
+                        <constraint firstAttribute="width" constant="295" id="rFS-n6-0AS"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="OnK-AK-enJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="7uw-e5-aCY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="11N-Nv-Mba" secondAttribute="trailing" constant="67" id="L0h-Cq-qzf"/>
@@ -52,6 +61,8 @@ Dessa forma conseguimos utilizar com maior precisão para calcular a distância 
                 <constraint firstItem="11N-Nv-Mba" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="Qut-cq-OcX"/>
                 <constraint firstItem="OnK-AK-enJ" firstAttribute="top" secondItem="11N-Nv-Mba" secondAttribute="bottom" constant="44" id="S6O-K2-hfL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c8R-gl-HXP" secondAttribute="trailing" constant="33" id="a55-ep-bKp"/>
+                <constraint firstItem="fMX-UF-mgL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lD7-wo-r0U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fMX-UF-mgL" secondAttribute="bottom" constant="60" id="lDJ-TQ-MEb"/>
             </constraints>
             <point key="canvasLocation" x="24" y="-11"/>
         </view>

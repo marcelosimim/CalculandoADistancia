@@ -14,6 +14,8 @@
 		A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A22061299287BC00B6DEF3 /* PermissionViewModel.swift */; };
 		A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A2206729928C0B00B6DEF3 /* PermissionViewController.swift */; };
 		A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */; };
+		A3A220722992B1C900B6DEF3 /* MainButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A220712992B1C900B6DEF3 /* MainButton.xib */; };
+		A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220732992B1FD00B6DEF3 /* MainButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A3A22061299287BC00B6DEF3 /* PermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewModel.swift; sourceTree = "<group>"; };
 		A3A2206729928C0B00B6DEF3 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
+		A3A220712992B1C900B6DEF3 /* MainButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainButton.xib; sourceTree = "<group>"; };
+		A3A220732992B1FD00B6DEF3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			children = (
 				A3A2205A2992873400B6DEF3 /* AppDelegate */,
 				A3A2205C2992876000B6DEF3 /* Coordinator */,
+				A3A2206B299293F500B6DEF3 /* Components */,
 				A3A2205B2992874C00B6DEF3 /* Resources */,
 				A3A2205D2992878F00B6DEF3 /* Screens */,
 				A3A220542992849700B6DEF3 /* Info.plist */,
@@ -108,6 +113,23 @@
 				A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */,
 			);
 			path = Permission;
+			sourceTree = "<group>";
+		};
+		A3A2206B299293F500B6DEF3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A3A220702992AA8200B6DEF3 /* Main Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A3A220702992AA8200B6DEF3 /* Main Button */ = {
+			isa = PBXGroup;
+			children = (
+				A3A220712992B1C900B6DEF3 /* MainButton.xib */,
+				A3A220732992B1FD00B6DEF3 /* MainButton.swift */,
+			);
+			path = "Main Button";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A220722992B1C900B6DEF3 /* MainButton.xib in Resources */,
 				A3A220532992849700B6DEF3 /* LaunchScreen.storyboard in Resources */,
 				A3A220502992849700B6DEF3 /* Assets.xcassets in Resources */,
 				A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */,
@@ -185,6 +208,7 @@
 				A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */,
 				A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */,
 				A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */,
+				A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

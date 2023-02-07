@@ -10,8 +10,15 @@ import UIKit
 class PermissionViewController: UIViewController {
     private lazy var viewModel: PermissionViewModelProtocol = PermissionViewModel()
 
+    @IBOutlet weak var mainButton: MainButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        //view.backgroundColor = .white
+        setupMainButton()
+    }
+
+    private func setupMainButton() {
+        mainButton.setupTitle("ATIVAR LOCALIZAÇÃO")
     }
 }
