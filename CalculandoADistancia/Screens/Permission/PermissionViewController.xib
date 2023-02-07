@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PermissionViewController" customModule="CalculandoADistancia" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-pin" translatesAutoresizingMaskIntoConstraints="NO" id="c8R-gl-HXP">
+                    <rect key="frame" x="180" y="89" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="3tA-VT-PmR"/>
+                        <constraint firstAttribute="width" constant="180" id="irY-59-VEz"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precisamos saber sua localização" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11N-Nv-Mba">
+                    <rect key="frame" x="22" y="241.99999999999997" width="304" height="52.666666666666657"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnK-AK-enJ">
+                    <rect key="frame" x="22" y="338.66666666666669" width="349" height="184.00000000000006"/>
+                    <string key="text">Para um melhor aproveitamento do seu aplicativo, é importante compartilhar a sua localização.
+
+Dessa forma conseguimos utilizar com maior precisão para calcular a distância do último ponto</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OnK-AK-enJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="7uw-e5-aCY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="11N-Nv-Mba" secondAttribute="trailing" constant="67" id="L0h-Cq-qzf"/>
+                <constraint firstItem="c8R-gl-HXP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="MXH-AI-APP"/>
+                <constraint firstItem="OnK-AK-enJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P5M-C9-Wun"/>
+                <constraint firstItem="11N-Nv-Mba" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="183" id="QjX-hG-eTv"/>
+                <constraint firstItem="11N-Nv-Mba" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="Qut-cq-OcX"/>
+                <constraint firstItem="OnK-AK-enJ" firstAttribute="top" secondItem="11N-Nv-Mba" secondAttribute="bottom" constant="44" id="S6O-K2-hfL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c8R-gl-HXP" secondAttribute="trailing" constant="33" id="a55-ep-bKp"/>
+            </constraints>
+            <point key="canvasLocation" x="24" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="map-pin" width="241" height="241"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
