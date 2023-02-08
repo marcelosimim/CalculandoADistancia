@@ -14,7 +14,10 @@ class PermissionViewController: UIViewController, Coordinating {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .white
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupMainButton()
     }
 
@@ -26,6 +29,6 @@ class PermissionViewController: UIViewController, Coordinating {
 
 extension PermissionViewController: MainButtonDelegate {
     func didTapMainButton() {
-        print("tap")
+        viewModel.requestLocation()
     }
 }
