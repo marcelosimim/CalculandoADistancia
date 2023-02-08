@@ -16,6 +16,10 @@
 		A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */; };
 		A3A220722992B1C900B6DEF3 /* MainButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A220712992B1C900B6DEF3 /* MainButton.xib */; };
 		A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220732992B1FD00B6DEF3 /* MainButton.swift */; };
+		A3A220762992F04600B6DEF3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220752992F04600B6DEF3 /* Coordinator.swift */; };
+		A3A220782992F09700B6DEF3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220772992F09700B6DEF3 /* Event.swift */; };
+		A3A2207A2992F1FF00B6DEF3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220792992F1FF00B6DEF3 /* MainCoordinator.swift */; };
+		A3E6F4C529931D450019E76A /* LocationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4C429931D450019E76A /* LocationDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
 		A3A220712992B1C900B6DEF3 /* MainButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainButton.xib; sourceTree = "<group>"; };
 		A3A220732992B1FD00B6DEF3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		A3A220752992F04600B6DEF3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A3A220772992F09700B6DEF3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A3A220792992F1FF00B6DEF3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A3E6F4C429931D450019E76A /* LocationDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,8 @@
 				A3A2205A2992873400B6DEF3 /* AppDelegate */,
 				A3A2205C2992876000B6DEF3 /* Coordinator */,
 				A3A2206B299293F500B6DEF3 /* Components */,
+				A3E6F4C329931D390019E76A /* Data */,
+				A3E6F4C029931CAC0019E76A /* Helpers */,
 				A3A2205B2992874C00B6DEF3 /* Resources */,
 				A3A2205D2992878F00B6DEF3 /* Screens */,
 				A3A220542992849700B6DEF3 /* Info.plist */,
@@ -93,6 +103,9 @@
 		A3A2205C2992876000B6DEF3 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				A3A220752992F04600B6DEF3 /* Coordinator.swift */,
+				A3A220772992F09700B6DEF3 /* Event.swift */,
+				A3A220792992F1FF00B6DEF3 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -130,6 +143,21 @@
 				A3A220732992B1FD00B6DEF3 /* MainButton.swift */,
 			);
 			path = "Main Button";
+			sourceTree = "<group>";
+		};
+		A3E6F4C029931CAC0019E76A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A3E6F4C329931D390019E76A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6F4C429931D450019E76A /* LocationDefaults.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +233,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3A220472992849500B6DEF3 /* AppDelegate.swift in Sources */,
+				A3A2207A2992F1FF00B6DEF3 /* MainCoordinator.swift in Sources */,
+				A3E6F4C529931D450019E76A /* LocationDefaults.swift in Sources */,
 				A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */,
+				A3A220762992F04600B6DEF3 /* Coordinator.swift in Sources */,
 				A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */,
 				A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */,
+				A3A220782992F09700B6DEF3 /* Event.swift in Sources */,
 				A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

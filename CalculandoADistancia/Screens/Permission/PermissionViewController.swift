@@ -7,10 +7,10 @@
 
 import UIKit
 
-class PermissionViewController: UIViewController {
+class PermissionViewController: UIViewController, Coordinating {
     private lazy var viewModel: PermissionViewModelProtocol = PermissionViewModel()
-
     @IBOutlet weak var mainButton: MainButton!
+    var coordinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
