@@ -26,11 +26,13 @@ class MainCoordinator: Coordinator {
 
     func start() {
         if isLocationAllowed() {
-
+            var home: UIViewController & Coordinating = HomeViewController()
+            home.coordinator = self
+            navigationController?.pushViewController(home, animated: true)
         } else {
-            var firstVC: UIViewController & Coordinating = PermissionViewController()
-            firstVC.coordinator = self
-            navigationController?.pushViewController(firstVC, animated: true)
+            var permission: UIViewController & Coordinating = PermissionViewController()
+            permission.coordinator = self
+            navigationController?.pushViewController(permission, animated: true)
         }
     }
 

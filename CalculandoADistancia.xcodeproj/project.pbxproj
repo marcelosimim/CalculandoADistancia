@@ -20,6 +20,9 @@
 		A3A220782992F09700B6DEF3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220772992F09700B6DEF3 /* Event.swift */; };
 		A3A2207A2992F1FF00B6DEF3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220792992F1FF00B6DEF3 /* MainCoordinator.swift */; };
 		A3E6F4C529931D450019E76A /* LocationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4C429931D450019E76A /* LocationDefaults.swift */; };
+		A3E6F4CC2993D9160019E76A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4C92993D9160019E76A /* HomeViewModel.swift */; };
+		A3E6F4CF2993D9300019E76A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4CD2993D9300019E76A /* HomeViewController.swift */; };
+		A3E6F4D02993D9300019E76A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6F4CE2993D9300019E76A /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		A3A220772992F09700B6DEF3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A3A220792992F1FF00B6DEF3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A3E6F4C429931D450019E76A /* LocationDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDefaults.swift; sourceTree = "<group>"; };
+		A3E6F4C92993D9160019E76A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A3E6F4CD2993D9300019E76A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A3E6F4CE2993D9300019E76A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 		A3A2205D2992878F00B6DEF3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A3E6F4C62993D8EA0019E76A /* Home */,
 				A3A2205E299287A200B6DEF3 /* Permission */,
 			);
 			path = Screens;
@@ -158,6 +165,16 @@
 				A3E6F4C429931D450019E76A /* LocationDefaults.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		A3E6F4C62993D8EA0019E76A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6F4C92993D9160019E76A /* HomeViewModel.swift */,
+				A3E6F4CD2993D9300019E76A /* HomeViewController.swift */,
+				A3E6F4CE2993D9300019E76A /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +237,7 @@
 			files = (
 				A3A220722992B1C900B6DEF3 /* MainButton.xib in Resources */,
 				A3A220532992849700B6DEF3 /* LaunchScreen.storyboard in Resources */,
+				A3E6F4D02993D9300019E76A /* HomeViewController.xib in Resources */,
 				A3A220502992849700B6DEF3 /* Assets.xcassets in Resources */,
 				A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */,
 			);
@@ -237,7 +255,9 @@
 				A3E6F4C529931D450019E76A /* LocationDefaults.swift in Sources */,
 				A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */,
 				A3A220762992F04600B6DEF3 /* Coordinator.swift in Sources */,
+				A3E6F4CC2993D9160019E76A /* HomeViewModel.swift in Sources */,
 				A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */,
+				A3E6F4CF2993D9300019E76A /* HomeViewController.swift in Sources */,
 				A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */,
 				A3A220782992F09700B6DEF3 /* Event.swift in Sources */,
 				A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */,
