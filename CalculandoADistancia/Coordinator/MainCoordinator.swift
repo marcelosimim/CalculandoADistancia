@@ -31,7 +31,7 @@ class MainCoordinator: Coordinator {
             home.coordinator = self
             navigationController?.pushViewController(home, animated: true)
         } else {
-            var permission: UIViewController & Coordinating = PermissionViewController()
+            var permission: UIViewController & Coordinating = NoPermissionViewController()
             permission.coordinator = self
             navigationController?.pushViewController(permission, animated: true)
         }

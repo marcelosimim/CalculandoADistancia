@@ -12,21 +12,22 @@
 		A3932590299483AF007EA0F7 /* SecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393258F299483AF007EA0F7 /* SecondButton.swift */; };
 		A393259629951EB3007EA0F7 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393259529951EB3007EA0F7 /* Coordinate.swift */; };
 		A39325982995304B007EA0F7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39325972995304B007EA0F7 /* HomeView.swift */; };
+		A39325AD299551BD007EA0F7 /* NoPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39325AA299551BD007EA0F7 /* NoPermissionViewController.swift */; };
+		A39325AE299551BD007EA0F7 /* NoPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39325AB299551BD007EA0F7 /* NoPermissionView.swift */; };
+		A39325AF299551BD007EA0F7 /* NoPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39325AC299551BD007EA0F7 /* NoPermissionViewModel.swift */; };
+		A39325B1299551D0007EA0F7 /* NoPermissionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39325B0299551D0007EA0F7 /* NoPermissionView.xib */; };
+		A39325B329955724007EA0F7 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39325B229955724007EA0F7 /* HomeView.xib */; };
+		A39325B6299557A6007EA0F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39325B5299557A6007EA0F7 /* HomeViewController.swift */; };
 		A3A220472992849500B6DEF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220462992849500B6DEF3 /* AppDelegate.swift */; };
 		A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220482992849500B6DEF3 /* SceneDelegate.swift */; };
 		A3A220502992849700B6DEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A2204F2992849700B6DEF3 /* Assets.xcassets */; };
 		A3A220532992849700B6DEF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A220512992849700B6DEF3 /* LaunchScreen.storyboard */; };
-		A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A22061299287BC00B6DEF3 /* PermissionViewModel.swift */; };
-		A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A2206729928C0B00B6DEF3 /* PermissionViewController.swift */; };
-		A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */; };
 		A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220732992B1FD00B6DEF3 /* MainButton.swift */; };
 		A3A220762992F04600B6DEF3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220752992F04600B6DEF3 /* Coordinator.swift */; };
 		A3A220782992F09700B6DEF3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220772992F09700B6DEF3 /* Event.swift */; };
 		A3A2207A2992F1FF00B6DEF3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220792992F1FF00B6DEF3 /* MainCoordinator.swift */; };
 		A3E6F4C529931D450019E76A /* LocationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4C429931D450019E76A /* LocationDefaults.swift */; };
 		A3E6F4CC2993D9160019E76A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4C92993D9160019E76A /* HomeViewModel.swift */; };
-		A3E6F4CF2993D9300019E76A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4CD2993D9300019E76A /* HomeViewController.swift */; };
-		A3E6F4D02993D9300019E76A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6F4CE2993D9300019E76A /* HomeViewController.xib */; };
 		A3E6F4D32993DB300019E76A /* GrayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4D22993DB300019E76A /* GrayCardView.swift */; };
 		A3E6F4D52993DB420019E76A /* GrayCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6F4D42993DB420019E76A /* GrayCardView.xib */; };
 		A3E6F4D92994225B0019E76A /* GreenCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6F4D82994225B0019E76A /* GreenCardView.xib */; };
@@ -39,23 +40,24 @@
 		A393258F299483AF007EA0F7 /* SecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButton.swift; sourceTree = "<group>"; };
 		A393259529951EB3007EA0F7 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		A39325972995304B007EA0F7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A39325AA299551BD007EA0F7 /* NoPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPermissionViewController.swift; sourceTree = "<group>"; };
+		A39325AB299551BD007EA0F7 /* NoPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPermissionView.swift; sourceTree = "<group>"; };
+		A39325AC299551BD007EA0F7 /* NoPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPermissionViewModel.swift; sourceTree = "<group>"; };
+		A39325B0299551D0007EA0F7 /* NoPermissionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoPermissionView.xib; sourceTree = "<group>"; };
+		A39325B229955724007EA0F7 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		A39325B5299557A6007EA0F7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3A220432992849500B6DEF3 /* CalculandoADistancia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculandoADistancia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A220462992849500B6DEF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A220482992849500B6DEF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A3A2204F2992849700B6DEF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3A220522992849700B6DEF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3A220542992849700B6DEF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3A22061299287BC00B6DEF3 /* PermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewModel.swift; sourceTree = "<group>"; };
-		A3A2206729928C0B00B6DEF3 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
-		A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
 		A3A220732992B1FD00B6DEF3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		A3A220752992F04600B6DEF3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A3A220772992F09700B6DEF3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A3A220792992F1FF00B6DEF3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A3E6F4C429931D450019E76A /* LocationDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDefaults.swift; sourceTree = "<group>"; };
 		A3E6F4C92993D9160019E76A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		A3E6F4CD2993D9300019E76A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A3E6F4CE2993D9300019E76A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A3E6F4D22993DB300019E76A /* GrayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayCardView.swift; sourceTree = "<group>"; };
 		A3E6F4D42993DB420019E76A /* GrayCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrayCardView.xib; sourceTree = "<group>"; };
 		A3E6F4D82994225B0019E76A /* GreenCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenCardView.xib; sourceTree = "<group>"; };
@@ -97,6 +99,17 @@
 				A393259529951EB3007EA0F7 /* Coordinate.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A39325A9299551A1007EA0F7 /* NoPermission */ = {
+			isa = PBXGroup;
+			children = (
+				A39325AA299551BD007EA0F7 /* NoPermissionViewController.swift */,
+				A39325AB299551BD007EA0F7 /* NoPermissionView.swift */,
+				A39325AC299551BD007EA0F7 /* NoPermissionViewModel.swift */,
+				A39325B0299551D0007EA0F7 /* NoPermissionView.xib */,
+			);
+			path = NoPermission;
 			sourceTree = "<group>";
 		};
 		A3A2203A2992849500B6DEF3 = {
@@ -161,20 +174,10 @@
 		A3A2205D2992878F00B6DEF3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A39325A9299551A1007EA0F7 /* NoPermission */,
 				A3E6F4C62993D8EA0019E76A /* Home */,
-				A3A2205E299287A200B6DEF3 /* Permission */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		A3A2205E299287A200B6DEF3 /* Permission */ = {
-			isa = PBXGroup;
-			children = (
-				A3A22061299287BC00B6DEF3 /* PermissionViewModel.swift */,
-				A3A2206729928C0B00B6DEF3 /* PermissionViewController.swift */,
-				A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */,
-			);
-			path = Permission;
 			sourceTree = "<group>";
 		};
 		A3A2206B299293F500B6DEF3 /* Components */ = {
@@ -206,10 +209,10 @@
 		A3E6F4C62993D8EA0019E76A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A39325B229955724007EA0F7 /* HomeView.xib */,
 				A3E6F4C92993D9160019E76A /* HomeViewModel.swift */,
-				A3E6F4CD2993D9300019E76A /* HomeViewController.swift */,
-				A3E6F4CE2993D9300019E76A /* HomeViewController.xib */,
 				A39325972995304B007EA0F7 /* HomeView.swift */,
+				A39325B5299557A6007EA0F7 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -299,14 +302,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39325B1299551D0007EA0F7 /* NoPermissionView.xib in Resources */,
 				A393258B2994836F007EA0F7 /* MainButton.xib in Resources */,
 				A393258E299483A4007EA0F7 /* SecondButton.xib in Resources */,
 				A3E6F4D92994225B0019E76A /* GreenCardView.xib in Resources */,
 				A3A220532992849700B6DEF3 /* LaunchScreen.storyboard in Resources */,
-				A3E6F4D02993D9300019E76A /* HomeViewController.xib in Resources */,
 				A3A220502992849700B6DEF3 /* Assets.xcassets in Resources */,
-				A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */,
 				A3E6F4D52993DB420019E76A /* GrayCardView.xib in Resources */,
+				A39325B329955724007EA0F7 /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,14 +323,15 @@
 				A3A220472992849500B6DEF3 /* AppDelegate.swift in Sources */,
 				A3A2207A2992F1FF00B6DEF3 /* MainCoordinator.swift in Sources */,
 				A3E6F4C529931D450019E76A /* LocationDefaults.swift in Sources */,
-				A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */,
+				A39325AE299551BD007EA0F7 /* NoPermissionView.swift in Sources */,
 				A3E6F4D32993DB300019E76A /* GrayCardView.swift in Sources */,
 				A3A220762992F04600B6DEF3 /* Coordinator.swift in Sources */,
 				A3E6F4CC2993D9160019E76A /* HomeViewModel.swift in Sources */,
-				A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */,
+				A39325AD299551BD007EA0F7 /* NoPermissionViewController.swift in Sources */,
+				A39325AF299551BD007EA0F7 /* NoPermissionViewModel.swift in Sources */,
 				A3E6F4DB299422660019E76A /* GreenCardView.swift in Sources */,
-				A3E6F4CF2993D9300019E76A /* HomeViewController.swift in Sources */,
 				A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */,
+				A39325B6299557A6007EA0F7 /* HomeViewController.swift in Sources */,
 				A3A220782992F09700B6DEF3 /* Event.swift in Sources */,
 				A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */,
 				A39325982995304B007EA0F7 /* HomeView.swift in Sources */,

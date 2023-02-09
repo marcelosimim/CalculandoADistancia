@@ -1,96 +1,50 @@
 //
-//  HomeViewController.swift
+//  Home2ViewController.swift
 //  CalculandoADistancia
 //
-//  Created by Marcelo Simim Santos on 2/8/23.
+//  Created by Marcelo Simim Santos on 2/9/23.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController, Coordinating {
+    private lazy var customView: HomeViewProtocol = HomeView()
     private lazy var viewModel: HomeViewModelProtocol = HomeViewModel()
     var coordinator: Coordinator?
     
-    @IBOutlet weak var pointAWaiting: GrayCardView!
-    @IBOutlet weak var pointBWaiting: GrayCardView!
-    @IBOutlet weak var pointASaved: GreenCardView!
-    @IBOutlet weak var pointBSaved: GreenCardView!
-    @IBOutlet weak var saveButton: MainButton!
-    @IBOutlet weak var distanceView: GrayCardView!
-    @IBOutlet weak var restartButton: SecondButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Calcule a distância"
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupView()
         viewModelBinds()
     }
 
-    private func setupView() {
-        saveButton.titleLabel.text = "SALVAR PONTO"
-        saveButton.delegate = self
-
-        restartButton.titleLabel.text = "REINICIAR"
-        restartButton.delegate = self
-        
-        pointAWaiting.titleLabel.text = "Ponto A"
-        pointAWaiting.subtitleLabel.text = "aguardando posição"
-        pointBWaiting.titleLabel.text = "Ponto B"
-        pointBWaiting.subtitleLabel.text = "aguardando posição"
-
-        pointASaved.pointLabel.text = "Ponto A"
-        pointASaved.delegate = self
-        pointBSaved.pointLabel.text = "Ponto B"
-        pointBSaved.deleteButton.isHidden = true
-
-        distanceView.titleLabel.text = "Distância"
+    override func loadView() {
+        super.loadView()
+        view = customView as? UIView
+        title = "Calcule a distância"
+        customView.setupDelegate(self)
     }
 
     private func viewModelBinds() {
-        viewModel.didFinishSavingPointA = { [weak self] coordinate in
-            self?.pointASaved.latValue.text = "\(coordinate.latitude)"
-            self?.pointASaved.lonValue.text = "\(coordinate.latitude)"
-            self?.pointAWaiting.isHidden = true
-            self?.pointASaved.isHidden = false
-            self?.pointBWaiting.isHidden = false
-        }
+       viewModel.didFinishSavingPointA = { [weak self] coordinate in
+           self?.customView.didFinishSavingPointA(coordinate: coordinate)
+       }
 
-        viewModel.didFinishSavingPointB = { [weak self] coordinate in
-            self?.pointBSaved.latValue.text = "\(coordinate.latitude)"
-            self?.pointBSaved.lonValue.text = "\(coordinate.latitude)"
-            self?.pointBWaiting.isHidden = true
-            self?.pointBSaved.isHidden = false
-            self?.pointASaved.deleteButton.isHidden = true
-        }
+       viewModel.didFinishSavingPointB = { [weak self] coordinate in
+           self?.customView.didFinishSavingPointB(coordinate: coordinate)
+       }
 
-        viewModel.didFinishCalculatingDistante = { [weak self] distance in
-            self?.saveButton.isHidden = true
-            self?.restartButton.isHidden = false
-            self?.distanceView.isHidden = false
-            self?.distanceView.subtitleLabel.text = String(format: "%.2f km", distance)
-        }
+       viewModel.didFinishCalculatingDistante = { [weak self] distance in
+           self?.customView.didFinishCalculatingDistante(distance: distance)
+       }
 
-        viewModel.didFinishRestarting = { [weak self] in
-            self?.pointASaved.isHidden = true
-            self?.pointASaved.deleteButton.isHidden = false
-            self?.pointBSaved.isHidden = true
-            self?.distanceView.isHidden = true
-            self?.restartButton.isHidden = true
+       viewModel.didFinishRestarting = { [weak self] in
+           self?.customView.didFinishRestarting()
+       }
 
-            self?.pointAWaiting.isHidden = false
-            self?.pointBWaiting.isHidden = false
-            self?.saveButton.isHidden = false
-        }
-
-        viewModel.didFinishDeletingPointA = { [weak self] in
-            self?.pointAWaiting.isHidden = false
-            self?.pointASaved.isHidden = true
-        }
-    }
+       viewModel.didFinishDeletingPointA = { [weak self] in
+           self?.customView.didFinishDeletingPointA()
+       }
+   }
 }
 
 extension HomeViewController: MainButtonDelegate, SecondButtonDelegate, GreenCardViewDelegate {

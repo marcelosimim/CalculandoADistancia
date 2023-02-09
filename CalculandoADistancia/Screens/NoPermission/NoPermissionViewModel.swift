@@ -1,21 +1,21 @@
 //
 //  
-//  PermissionViewModel.swift
+//  NoPermissionViewModel.swift
 //  CalculandoADistancia
 //
-//  Created by Marcelo Simim Santos on 2/7/23.
+//  Created by Marcelo Simim Santos on 2/9/23.
 //
 //
 import CoreLocation
 import Foundation
 import UIKit
 
-protocol PermissionViewModelProtocol {
+protocol NoPermissionViewModelProtocol {
     var hasUserPermission: (() -> ()) { get set }
     func requestLocation()
 }
 
-final class PermissionViewModel: NSObject, PermissionViewModelProtocol {
+final class NoPermissionViewModel: NSObject, NoPermissionViewModelProtocol {
     private let locationManager = CLLocationManager()
     private let locationDefaults = LocationDefaults()
     var hasUserPermission: (() -> ()) = { }
@@ -41,7 +41,7 @@ final class PermissionViewModel: NSObject, PermissionViewModelProtocol {
     }
 }
 
-extension PermissionViewModel: CLLocationManagerDelegate {
+extension NoPermissionViewModel: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch locationManager.authorizationStatus {
         case .authorizedAlways, .authorizedWhenInUse:

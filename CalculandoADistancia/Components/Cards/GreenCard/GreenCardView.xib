@@ -79,6 +79,12 @@
                 <constraint firstItem="vjL-sH-kFZ" firstAttribute="centerY" secondItem="9q0-LB-FD5" secondAttribute="centerY" id="vyY-hP-7mW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
         </view>
     </objects>
