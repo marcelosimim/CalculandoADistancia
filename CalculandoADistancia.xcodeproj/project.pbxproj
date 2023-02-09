@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A393258B2994836F007EA0F7 /* MainButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A393258A2994836F007EA0F7 /* MainButton.xib */; };
+		A393258E299483A4007EA0F7 /* SecondButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A393258D299483A4007EA0F7 /* SecondButton.xib */; };
+		A3932590299483AF007EA0F7 /* SecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393258F299483AF007EA0F7 /* SecondButton.swift */; };
 		A3A220472992849500B6DEF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220462992849500B6DEF3 /* AppDelegate.swift */; };
 		A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220482992849500B6DEF3 /* SceneDelegate.swift */; };
 		A3A220502992849700B6DEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A2204F2992849700B6DEF3 /* Assets.xcassets */; };
@@ -14,7 +17,6 @@
 		A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A22061299287BC00B6DEF3 /* PermissionViewModel.swift */; };
 		A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A2206729928C0B00B6DEF3 /* PermissionViewController.swift */; };
 		A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */; };
-		A3A220722992B1C900B6DEF3 /* MainButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A220712992B1C900B6DEF3 /* MainButton.xib */; };
 		A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220732992B1FD00B6DEF3 /* MainButton.swift */; };
 		A3A220762992F04600B6DEF3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220752992F04600B6DEF3 /* Coordinator.swift */; };
 		A3A220782992F09700B6DEF3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220772992F09700B6DEF3 /* Event.swift */; };
@@ -23,9 +25,16 @@
 		A3E6F4CC2993D9160019E76A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4C92993D9160019E76A /* HomeViewModel.swift */; };
 		A3E6F4CF2993D9300019E76A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4CD2993D9300019E76A /* HomeViewController.swift */; };
 		A3E6F4D02993D9300019E76A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6F4CE2993D9300019E76A /* HomeViewController.xib */; };
+		A3E6F4D32993DB300019E76A /* GrayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4D22993DB300019E76A /* GrayCardView.swift */; };
+		A3E6F4D52993DB420019E76A /* GrayCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6F4D42993DB420019E76A /* GrayCardView.xib */; };
+		A3E6F4D92994225B0019E76A /* GreenCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6F4D82994225B0019E76A /* GreenCardView.xib */; };
+		A3E6F4DB299422660019E76A /* GreenCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E6F4DA299422660019E76A /* GreenCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A393258A2994836F007EA0F7 /* MainButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainButton.xib; sourceTree = "<group>"; };
+		A393258D299483A4007EA0F7 /* SecondButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondButton.xib; sourceTree = "<group>"; };
+		A393258F299483AF007EA0F7 /* SecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButton.swift; sourceTree = "<group>"; };
 		A3A220432992849500B6DEF3 /* CalculandoADistancia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculandoADistancia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A220462992849500B6DEF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A220482992849500B6DEF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +44,6 @@
 		A3A22061299287BC00B6DEF3 /* PermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewModel.swift; sourceTree = "<group>"; };
 		A3A2206729928C0B00B6DEF3 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		A3A2206829928C0B00B6DEF3 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
-		A3A220712992B1C900B6DEF3 /* MainButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainButton.xib; sourceTree = "<group>"; };
 		A3A220732992B1FD00B6DEF3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		A3A220752992F04600B6DEF3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A3A220772992F09700B6DEF3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -44,6 +52,10 @@
 		A3E6F4C92993D9160019E76A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A3E6F4CD2993D9300019E76A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3E6F4CE2993D9300019E76A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A3E6F4D22993DB300019E76A /* GrayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayCardView.swift; sourceTree = "<group>"; };
+		A3E6F4D42993DB420019E76A /* GrayCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrayCardView.xib; sourceTree = "<group>"; };
+		A3E6F4D82994225B0019E76A /* GreenCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreenCardView.xib; sourceTree = "<group>"; };
+		A3E6F4DA299422660019E76A /* GreenCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A30E2E222994834900E9027E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A393258A2994836F007EA0F7 /* MainButton.xib */,
+				A3A220732992B1FD00B6DEF3 /* MainButton.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A393258C29948377007EA0F7 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				A393258D299483A4007EA0F7 /* SecondButton.xib */,
+				A393258F299483AF007EA0F7 /* SecondButton.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
 		A3A2203A2992849500B6DEF3 = {
 			isa = PBXGroup;
 			children = (
@@ -138,18 +168,19 @@
 		A3A2206B299293F500B6DEF3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A3A220702992AA8200B6DEF3 /* Main Button */,
+				A3E6F4D12993DAE30019E76A /* Cards */,
+				A3A220702992AA8200B6DEF3 /* Buttons */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		A3A220702992AA8200B6DEF3 /* Main Button */ = {
+		A3A220702992AA8200B6DEF3 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				A3A220712992B1C900B6DEF3 /* MainButton.xib */,
-				A3A220732992B1FD00B6DEF3 /* MainButton.swift */,
+				A393258C29948377007EA0F7 /* Second */,
+				A30E2E222994834900E9027E /* Main */,
 			);
-			path = "Main Button";
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		A3E6F4C029931CAC0019E76A /* Helpers */ = {
@@ -175,6 +206,33 @@
 				A3E6F4CE2993D9300019E76A /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A3E6F4D12993DAE30019E76A /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6F4D7299422440019E76A /* GreenCard */,
+				A3E6F4D6299422130019E76A /* GrayCard */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		A3E6F4D6299422130019E76A /* GrayCard */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6F4D22993DB300019E76A /* GrayCardView.swift */,
+				A3E6F4D42993DB420019E76A /* GrayCardView.xib */,
+			);
+			path = GrayCard;
+			sourceTree = "<group>";
+		};
+		A3E6F4D7299422440019E76A /* GreenCard */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6F4D82994225B0019E76A /* GreenCardView.xib */,
+				A3E6F4DA299422660019E76A /* GreenCardView.swift */,
+			);
+			path = GreenCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,11 +293,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A220722992B1C900B6DEF3 /* MainButton.xib in Resources */,
+				A393258B2994836F007EA0F7 /* MainButton.xib in Resources */,
+				A393258E299483A4007EA0F7 /* SecondButton.xib in Resources */,
+				A3E6F4D92994225B0019E76A /* GreenCardView.xib in Resources */,
 				A3A220532992849700B6DEF3 /* LaunchScreen.storyboard in Resources */,
 				A3E6F4D02993D9300019E76A /* HomeViewController.xib in Resources */,
 				A3A220502992849700B6DEF3 /* Assets.xcassets in Resources */,
 				A3A2206A29928C0B00B6DEF3 /* PermissionViewController.xib in Resources */,
+				A3E6F4D52993DB420019E76A /* GrayCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +315,16 @@
 				A3A2207A2992F1FF00B6DEF3 /* MainCoordinator.swift in Sources */,
 				A3E6F4C529931D450019E76A /* LocationDefaults.swift in Sources */,
 				A3A2206929928C0B00B6DEF3 /* PermissionViewController.swift in Sources */,
+				A3E6F4D32993DB300019E76A /* GrayCardView.swift in Sources */,
 				A3A220762992F04600B6DEF3 /* Coordinator.swift in Sources */,
 				A3E6F4CC2993D9160019E76A /* HomeViewModel.swift in Sources */,
 				A3A22064299287BC00B6DEF3 /* PermissionViewModel.swift in Sources */,
+				A3E6F4DB299422660019E76A /* GreenCardView.swift in Sources */,
 				A3E6F4CF2993D9300019E76A /* HomeViewController.swift in Sources */,
 				A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */,
 				A3A220782992F09700B6DEF3 /* Event.swift in Sources */,
 				A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */,
+				A3932590299483AF007EA0F7 /* SecondButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

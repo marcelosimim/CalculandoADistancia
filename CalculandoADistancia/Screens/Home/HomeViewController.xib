@@ -4,11 +4,19 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CalculandoADistancia" customModuleProvider="target">
             <connections>
+                <outlet property="distanceView" destination="tND-nb-mXS" id="L5H-vC-nGb"/>
+                <outlet property="pointASaved" destination="5kg-Kh-h4o" id="FpR-eQ-5Zb"/>
+                <outlet property="pointAWaiting" destination="x0e-St-lTT" id="IRq-fV-TiV"/>
+                <outlet property="pointBSaved" destination="y3P-dg-Iym" id="nu7-7A-eqd"/>
+                <outlet property="pointBWaiting" destination="Cgg-cp-BDk" id="fy4-B5-CdT"/>
+                <outlet property="restartButton" destination="hPd-vL-qes" id="68O-OT-FHL"/>
+                <outlet property="saveButton" destination="GEx-4R-DXa" id="hmO-Gx-KPv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +24,73 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jHU-gw-hpl">
+                    <rect key="frame" x="22" y="140" width="349" height="48"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="x0e-St-lTT" userLabel="PointAWaiting" customClass="GrayCardView" customModule="CalculandoADistancia" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="349" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <viewLayoutGuide key="safeArea" id="xsn-fy-nZL"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kg-Kh-h4o" userLabel="PointASaved" customClass="GreenCardView" customModule="CalculandoADistancia" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" id="Cgg-cp-BDk" userLabel="PointBWaiting" customClass="GrayCardView" customModule="CalculandoADistancia" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <viewLayoutGuide key="safeArea" id="Kza-FJ-YeJ"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-dg-Iym" userLabel="PointBSaved" customClass="GreenCardView" customModule="CalculandoADistancia" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" id="tND-nb-mXS" userLabel="Distance" customClass="GrayCardView" customModule="CalculandoADistancia" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <viewLayoutGuide key="safeArea" id="mfM-HS-m6F"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEx-4R-DXa" customClass="MainButton" customModule="CalculandoADistancia" customModuleProvider="target">
+                    <rect key="frame" x="48" y="479.66666666666669" width="297" height="53.000000000000057"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="OGD-aP-YBy"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-vL-qes" customClass="SecondButton" customModule="CalculandoADistancia" customModuleProvider="target">
+                    <rect key="frame" x="48" y="743" width="297" height="53"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="k9S-PG-drk"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="131" y="-11"/>
+            <constraints>
+                <constraint firstItem="jHU-gw-hpl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="81" id="2tW-UF-pnU"/>
+                <constraint firstItem="GEx-4R-DXa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="G7C-np-efH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hPd-vL-qes" secondAttribute="bottom" constant="22" id="bb0-09-2Va"/>
+                <constraint firstItem="GEx-4R-DXa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gIZ-52-Pay"/>
+                <constraint firstItem="hPd-vL-qes" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="ga2-vN-yal"/>
+                <constraint firstItem="hPd-vL-qes" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="my2-CH-fZr"/>
+                <constraint firstItem="jHU-gw-hpl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="t6M-2x-hqD"/>
+                <constraint firstItem="GEx-4R-DXa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="80" id="wiV-Wa-Bcv"/>
+                <constraint firstItem="jHU-gw-hpl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="ynh-fa-6Sz"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
