@@ -8,6 +8,5 @@
 import Foundation
 
 enum Event {
-    case savePoint
-    case restart
+    case home
 }

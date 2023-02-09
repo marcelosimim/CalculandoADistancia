@@ -17,10 +17,11 @@ class MainCoordinator: Coordinator {
 
     func eventOccurred(with type: Event) {
         switch type {
-        case .savePoint:
-            break
-        case .restart:
-            break
+        case .home:
+            var homeVC: UIViewController & Coordinating = HomeViewController()
+            homeVC.coordinator = self
+            homeVC.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(homeVC, animated: true)
         }
     }
 

@@ -86,6 +86,7 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
         let distance = pointALocation.distance(from: pointBLocation)
 
         didFinishCalculatingDistante(distance/1000)
+        locationManager.stopUpdatingLocation()
     }
 }
 

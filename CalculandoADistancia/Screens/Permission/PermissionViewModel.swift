@@ -11,12 +11,14 @@ import Foundation
 import UIKit
 
 protocol PermissionViewModelProtocol {
+    var hasUserPermission: (() -> ()) { get set }
     func requestLocation()
 }
 
 final class PermissionViewModel: NSObject, PermissionViewModelProtocol {
     private let locationManager = CLLocationManager()
     private let locationDefaults = LocationDefaults()
+    var hasUserPermission: (() -> ()) = { }
 
     override init() {
         super.init()
@@ -44,6 +46,7 @@ extension PermissionViewModel: CLLocationManagerDelegate {
         switch locationManager.authorizationStatus {
         case .authorizedAlways, .authorizedWhenInUse:
             locationDefaults.updateLocationPermission(true)
+            hasUserPermission()
         case .denied, .notDetermined, .restricted:
             locationDefaults.updateLocationPermission(false)
         @unknown default:
