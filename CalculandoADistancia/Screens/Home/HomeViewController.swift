@@ -71,7 +71,7 @@ class HomeViewController: UIViewController, Coordinating {
             self?.saveButton.isHidden = true
             self?.restartButton.isHidden = false
             self?.distanceView.isHidden = false
-            self?.distanceView.subtitleLabel.text = "\(distance) km"
+            self?.distanceView.subtitleLabel.text = String(format: "%.2f km", distance)
         }
 
         viewModel.didFinishRestarting = { [weak self] in
@@ -95,7 +95,7 @@ class HomeViewController: UIViewController, Coordinating {
 
 extension HomeViewController: MainButtonDelegate, SecondButtonDelegate, GreenCardViewDelegate {
     func didTapMainButton() {
-        viewModel.getCoordinates()
+        viewModel.savePoint()
     }
 
     func didTapSecondButton() {

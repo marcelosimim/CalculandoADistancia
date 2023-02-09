@@ -16,7 +16,7 @@ protocol HomeViewModelProtocol {
     var didFinishRestarting: (() -> ()) { get set }
     var didFinishDeletingPointA: (() -> ()) { get set }
 
-    func getCoordinates()
+    func savePoint()
     func restart()
     func deletePointA()
 }
@@ -24,6 +24,7 @@ protocol HomeViewModelProtocol {
 final class HomeViewModel: NSObject, HomeViewModelProtocol {
     private let locationDefaults = LocationDefaults()
     private let locationManager = CLLocationManager()
+    private var currentCoordinate: CLLocationCoordinate2D?
     private var wasPointASaved = false
     private var wasPointBSaved = false
     var didFinishSavingPointA: ((Coordinate) -> ()) = { _ in }
@@ -36,10 +37,22 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
         super.init()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
     }
 
-    func getCoordinates() {
-        locationManager.requestLocation()
+    func savePoint() {
+        guard let currentCoordinate else { return }
+        let coordinate = Coordinate(latitude: currentCoordinate.latitude, longitude: currentCoordinate.longitude)
+
+        if !wasPointASaved {
+            locationDefaults.savePoint(coordinate: coordinate, key: LocationDefaultsKey.pointA)
+            wasPointASaved = true
+        } else if !wasPointBSaved {
+            locationDefaults.savePoint(coordinate: coordinate, key: LocationDefaultsKey.pointB)
+            wasPointBSaved = true
+        }
+
+        updateView(coordinate)
     }
 
     func restart() {
@@ -54,20 +67,6 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
         wasPointASaved = false
         locationDefaults.deletePoint(LocationDefaultsKey.pointA)
         didFinishDeletingPointA()
-    }
-
-    private func savePoints(_ coordinateCL: CLLocationCoordinate2D) {
-        let coordinate = Coordinate(latitude: coordinateCL.latitude, longitude: coordinateCL.longitude)
-
-        if !wasPointASaved {
-            locationDefaults.savePoint(coordinate: coordinate, key: LocationDefaultsKey.pointA)
-            wasPointASaved = true
-        } else if !wasPointBSaved {
-            locationDefaults.savePoint(coordinate: coordinate, key: LocationDefaultsKey.pointB)
-            wasPointBSaved = true
-        }
-
-        updateView(coordinate)
     }
 
     private func updateView(_ coordinate: Coordinate) {
@@ -86,14 +85,15 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
         let pointBLocation = CLLocation(latitude: pointB.latitude, longitude: pointB.longitude)
         let distance = pointALocation.distance(from: pointBLocation)
 
-        didFinishCalculatingDistante(distance)
+        didFinishCalculatingDistante(distance/1000)
     }
 }
 
 extension HomeViewModel: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let coordinate: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        savePoints(coordinate)
+        currentCoordinate = coordinate
+        print(locations)
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
