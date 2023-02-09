@@ -61,6 +61,7 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
         locationDefaults.deletePoint(LocationDefaultsKey.pointA)
         locationDefaults.deletePoint(LocationDefaultsKey.pointB)
         didFinishRestarting()
+        locationManager.startUpdatingLocation()
     }
 
     func deletePointA() {
