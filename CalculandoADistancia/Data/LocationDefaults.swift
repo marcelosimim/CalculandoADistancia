@@ -17,6 +17,23 @@ class LocationDefaults {
     func getLocationPermission() -> Bool {
         defaults.bool(forKey: LocationDefaultsKey.locationPermission.rawValue)
     }
+
+    func savePoint(coordinate: Coordinate, key: LocationDefaultsKey) {
+        if let encoded = try? JSONEncoder().encode(coordinate) {
+            defaults.set(encoded, forKey: key.rawValue)
+        }
+    }
+
+    func getPoint(_ key: LocationDefaultsKey) -> Coordinate? {
+        if let data = defaults.object(forKey: key.rawValue) as? Data, let coordinate = try? JSONDecoder().decode(Coordinate.self, from: data) {
+            return coordinate
+        }
+        return nil
+    }
+
+    func deletePoint(_ key: LocationDefaultsKey) {
+        defaults.removeObject(forKey: key.rawValue)
+    }
 }
 
 enum LocationDefaultsKey: String {

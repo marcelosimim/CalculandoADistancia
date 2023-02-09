@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GreenCardView" customModule="CalculandoADistancia" customModuleProvider="target">
             <connections>
+                <outlet property="deleteButton" destination="chJ-U1-e4b" id="sqE-cS-jUP"/>
                 <outlet property="latValue" destination="vjL-sH-kFZ" id="m9r-s1-Bfu"/>
                 <outlet property="lonValue" destination="IP7-fw-ccl" id="6ns-kd-uc1"/>
                 <outlet property="pointLabel" destination="e7k-Da-WnI" id="HQT-5U-7cd"/>

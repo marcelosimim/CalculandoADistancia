@@ -10,6 +10,7 @@
 		A393258B2994836F007EA0F7 /* MainButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A393258A2994836F007EA0F7 /* MainButton.xib */; };
 		A393258E299483A4007EA0F7 /* SecondButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A393258D299483A4007EA0F7 /* SecondButton.xib */; };
 		A3932590299483AF007EA0F7 /* SecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393258F299483AF007EA0F7 /* SecondButton.swift */; };
+		A393259629951EB3007EA0F7 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393259529951EB3007EA0F7 /* Coordinate.swift */; };
 		A3A220472992849500B6DEF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220462992849500B6DEF3 /* AppDelegate.swift */; };
 		A3A220492992849500B6DEF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A220482992849500B6DEF3 /* SceneDelegate.swift */; };
 		A3A220502992849700B6DEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A2204F2992849700B6DEF3 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		A393258A2994836F007EA0F7 /* MainButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainButton.xib; sourceTree = "<group>"; };
 		A393258D299483A4007EA0F7 /* SecondButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondButton.xib; sourceTree = "<group>"; };
 		A393258F299483AF007EA0F7 /* SecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButton.swift; sourceTree = "<group>"; };
+		A393259529951EB3007EA0F7 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		A3A220432992849500B6DEF3 /* CalculandoADistancia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculandoADistancia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A220462992849500B6DEF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A220482992849500B6DEF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			path = Second;
 			sourceTree = "<group>";
 		};
+		A393259429951EA7007EA0F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A393259529951EB3007EA0F7 /* Coordinate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A3A2203A2992849500B6DEF3 = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +120,7 @@
 				A3A2205C2992876000B6DEF3 /* Coordinator */,
 				A3A2206B299293F500B6DEF3 /* Components */,
 				A3E6F4C329931D390019E76A /* Data */,
-				A3E6F4C029931CAC0019E76A /* Helpers */,
+				A393259429951EA7007EA0F7 /* Model */,
 				A3A2205B2992874C00B6DEF3 /* Resources */,
 				A3A2205D2992878F00B6DEF3 /* Screens */,
 				A3A220542992849700B6DEF3 /* Info.plist */,
@@ -181,13 +191,6 @@
 				A30E2E222994834900E9027E /* Main */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		A3E6F4C029931CAC0019E76A /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A3E6F4C329931D390019E76A /* Data */ = {
@@ -325,6 +328,7 @@
 				A3A220782992F09700B6DEF3 /* Event.swift in Sources */,
 				A3A220742992B1FD00B6DEF3 /* MainButton.swift in Sources */,
 				A3932590299483AF007EA0F7 /* SecondButton.swift in Sources */,
+				A393259629951EB3007EA0F7 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
