@@ -9,4 +9,5 @@ import Foundation
 
 enum Event {
     case home
+    case settings
 }

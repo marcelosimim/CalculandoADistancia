@@ -8,6 +8,7 @@
 //
 import CoreLocation
 import Foundation
+import UIKit
 
 protocol HomeViewModelProtocol {
     var didFinishSavingPointA: ((Coordinate) -> ()) { get set }
@@ -15,6 +16,7 @@ protocol HomeViewModelProtocol {
     var didFinishCalculatingDistante: ((Double) -> ()) { get set }
     var didFinishRestarting: (() -> ()) { get set }
     var didFinishDeletingPointA: (() -> ()) { get set }
+    var hasNoLocationPermission: (() -> ()) { get set }
 
     func savePoint()
     func restart()
@@ -32,6 +34,7 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
     var didFinishCalculatingDistante: ((Double) -> ()) = { _ in }
     var didFinishRestarting: (() -> ()) = { }
     var didFinishDeletingPointA: (() -> ()) = { }
+    var hasNoLocationPermission: (() -> ()) = { }
 
     override init() {
         super.init()
@@ -41,6 +44,11 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
     }
 
     func savePoint() {
+        if !isLocationAllowed() {
+            hasNoLocationPermission()
+            return
+        }
+        
         guard let currentCoordinate else { return }
         let coordinate = Coordinate(latitude: currentCoordinate.latitude, longitude: currentCoordinate.longitude)
 
@@ -70,6 +78,10 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
         didFinishDeletingPointA()
     }
 
+    private func isLocationAllowed() -> Bool {
+        locationManager.authorizationStatus == .authorizedAlways || locationManager.authorizationStatus == .authorizedWhenInUse
+    }
+
     private func updateView(_ coordinate: Coordinate) {
         if !wasPointBSaved {
             didFinishSavingPointA(coordinate)
@@ -88,6 +100,13 @@ final class HomeViewModel: NSObject, HomeViewModelProtocol {
 
         didFinishCalculatingDistante(distance/1000)
         locationManager.stopUpdatingLocation()
+    }
+
+    private func openSettings() {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl) { _ in }
+        }
     }
 }
 

@@ -28,6 +28,10 @@ class NoPermissionViewController: UIViewController, Coordinating {
         viewModel.hasUserPermission = { [weak self] in
             self?.coordinator?.eventOccurred(with: .home)
         }
+        
+        viewModel.openSettings = { [weak self] in
+            self?.coordinator?.eventOccurred(with: .settings)
+        }
     }
 }
 

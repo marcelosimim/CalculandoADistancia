@@ -5,10 +5,12 @@
 //  Created by Marcelo Simim Santos on 2/7/23.
 //
 
+import CoreLocation
 import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator {
+    private let locationManager = CLLocationManager()
     var navigationController: UINavigationController?
 
     init(navigationController: UINavigationController? = nil) {
@@ -22,6 +24,8 @@ class MainCoordinator: Coordinator {
             homeVC.coordinator = self
             homeVC.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(homeVC, animated: true)
+        case .settings:
+            openSettings()
         }
     }
 
@@ -38,7 +42,13 @@ class MainCoordinator: Coordinator {
     }
 
     private func isLocationAllowed() -> Bool {
-        let locationDefaults = LocationDefaults()
-        return locationDefaults.getLocationPermission()
+        return locationManager.authorizationStatus.rawValue == 3
+    }
+
+    private func openSettings() {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl) { _ in }
+        }
     }
 }

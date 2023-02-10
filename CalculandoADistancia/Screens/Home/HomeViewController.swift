@@ -44,6 +44,18 @@ class HomeViewController: UIViewController, Coordinating {
        viewModel.didFinishDeletingPointA = { [weak self] in
            self?.customView.didFinishDeletingPointA()
        }
+
+        viewModel.hasNoLocationPermission = { [weak self] in
+            let alert = UIAlertController(title: "Sem permissão", message:  "Você removeu as permissões de localização. Por favor, conceda novamente nos ajustes.", preferredStyle: .alert)
+            let actionConfig = UIAlertAction(title: "Configurações", style: .default) { [weak self] _ in 
+                self?.coordinator?.eventOccurred(with: .settings)
+            }
+            let cancel = UIAlertAction(title: "Cancelar", style: .cancel)
+            alert.addAction(actionConfig)
+            alert.addAction(cancel)
+
+            self?.present(alert, animated: true)
+        }
    }
 }
 

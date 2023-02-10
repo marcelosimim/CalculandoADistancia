@@ -10,14 +10,6 @@ import Foundation
 class LocationDefaults {
     private let defaults = UserDefaults.standard
 
-    func updateLocationPermission(_ allowed: Bool) {
-        defaults.setValue(allowed, forKey: LocationDefaultsKey.locationPermission.rawValue)
-    }
-
-    func getLocationPermission() -> Bool {
-        defaults.bool(forKey: LocationDefaultsKey.locationPermission.rawValue)
-    }
-
     func savePoint(coordinate: Coordinate, key: LocationDefaultsKey) {
         if let encoded = try? JSONEncoder().encode(coordinate) {
             defaults.set(encoded, forKey: key.rawValue)
