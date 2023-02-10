@@ -102,6 +102,7 @@ class HomeView: UIView, HomeViewProtocol {
     func didFinishDeletingPointA() {
         pointAWaiting.isHidden = false
         pointASaved.isHidden = true
+        pointBWaiting.isHidden = true
     }
 
     func setupDelegate(_ controller: UIViewController) {
