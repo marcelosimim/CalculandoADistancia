@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,47 +24,47 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jHU-gw-hpl">
-                    <rect key="frame" x="22" y="81" width="349" height="48"/>
+                    <rect key="frame" x="22" y="140" width="349" height="48"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="x0e-St-lTT" userLabel="PointAWaiting" customClass="GrayCardView" customModule="CalculandoADistancia" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="349" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <viewLayoutGuide key="safeArea" id="xsn-fy-nZL"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kg-Kh-h4o" userLabel="PointASaved" customClass="GreenCardView" customModule="CalculandoADistancia" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view hidden="YES" contentMode="scaleToFill" id="Cgg-cp-BDk" userLabel="PointBWaiting" customClass="GrayCardView" customModule="CalculandoADistancia" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <viewLayoutGuide key="safeArea" id="Kza-FJ-YeJ"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-dg-Iym" userLabel="PointBSaved" customClass="GreenCardView" customModule="CalculandoADistancia" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view hidden="YES" contentMode="scaleToFill" id="tND-nb-mXS" userLabel="Distance" customClass="GrayCardView" customModule="CalculandoADistancia" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="48" width="349" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <viewLayoutGuide key="safeArea" id="mfM-HS-m6F"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEx-4R-DXa" customClass="MainButton" customModule="CalculandoADistancia" customModuleProvider="target">
                     <rect key="frame" x="48" y="479.66666666666669" width="297" height="53.000000000000057"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="53" id="OGD-aP-YBy"/>
                     </constraints>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-vL-qes" customClass="SecondButton" customModule="CalculandoADistancia" customModuleProvider="target">
-                    <rect key="frame" x="48" y="777" width="297" height="53"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="48" y="743" width="297" height="53"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="53" id="k9S-PG-drk"/>
                     </constraints>
@@ -87,9 +86,4 @@
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
