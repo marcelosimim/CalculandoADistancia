@@ -11,12 +11,18 @@ import Foundation
 import UIKit
 
 protocol NoPermissionViewProtocol {
-    func setupDelegate(_ controller: UIViewController)
+    var mainButtonDelegate: MainButtonDelegate? { get set }
+
 }
 
 final class NoPermissionView: UIView, NoPermissionViewProtocol {
     static let identifier = "NoPermissionView"
     @IBOutlet weak var mainButton: MainButton!
+    weak var mainButtonDelegate: MainButtonDelegate? {
+        willSet {
+            mainButton.delegate = newValue
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) {
        super.init(coder: aDecoder)
@@ -26,10 +32,6 @@ final class NoPermissionView: UIView, NoPermissionViewProtocol {
     override init(frame: CGRect) {
        super.init(frame: frame)
        initSubviews()
-    }
-
-    func setupDelegate(_ controller: UIViewController) {
-        mainButton.delegate = controller as? MainButtonDelegate
     }
 
     private func initSubviews() {

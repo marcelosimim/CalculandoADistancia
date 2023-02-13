@@ -14,6 +14,7 @@ protocol NoPermissionViewModelProtocol {
     var hasUserPermission: (() -> ()) { get set }
     var openSettings: (() -> ()) { get set }
     func requestLocation()
+    func deinitDelegate()
 }
 
 final class NoPermissionViewModel: NSObject, NoPermissionViewModelProtocol {
@@ -24,6 +25,10 @@ final class NoPermissionViewModel: NSObject, NoPermissionViewModelProtocol {
     override init() {
         super.init()
         locationManager.delegate = self
+    }
+    
+    func deinitDelegate() {
+        locationManager.delegate = nil
     }
 
     func requestLocation() {

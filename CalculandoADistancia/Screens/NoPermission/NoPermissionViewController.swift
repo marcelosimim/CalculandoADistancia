@@ -21,7 +21,16 @@ class NoPermissionViewController: UIViewController, Coordinating {
     override func loadView() {
         super.loadView()
         view = customView as? UIView
-        customView.setupDelegate(self)
+        customView.mainButtonDelegate = self
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.deinitDelegate()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
     }
 
     private func viewModelBinds() {
